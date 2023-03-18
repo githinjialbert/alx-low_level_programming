@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
-*main - main entry point
-*return: always 0 (Success)
+*main - Entry point
+*Description: "Hello, puts"
+*Return: Always 0 (Success)
 */
 int main(void)
 {
