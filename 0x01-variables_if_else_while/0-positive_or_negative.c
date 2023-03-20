@@ -4,8 +4,8 @@
 /**
 *main - Entry point
 *Description: Positive anything is better than negative nothing
-*Return: always 0 
- */
+*Return: always 0
+*/
 int main(void)
 {
 	int n;
