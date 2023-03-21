@@ -1,15 +1,17 @@
-#include <stdio.h>
+#include "main.h" 
 /**
-*main - Entry point
-*Description: I sometimes suffer from insomnia
-*Return: always 0
+*print_alphabet - Prints alphabet in lowercase
+*
+*Return: always 0 (success)
 */
-void print_alphabet(void)
+void print_alphabet(void);
 {
-	for (n = 97; n <= 122 n++)
+	int n; 
+
+	for (n = 97; n <= 122; n++)
 	{
-		putchar(n);
+		_putchar(n);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
