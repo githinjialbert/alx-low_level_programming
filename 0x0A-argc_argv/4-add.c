@@ -9,27 +9,28 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, v;
+	int q, w;
 	int sum = 0;
-	char *a;
+	char *s;
 
 	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
-	for (i = 1; i < argc; i++)
+	for (q = 1; q < argc; q++)
 	{
-		a = argv[i];
-	}
-	for (v = 0; a[v] != '\0'; v++)
-	{
-		if (a[v] < '0' || a[v] > '9')
+		s = argv[q];
+		for (w = 0; s[w] != '\0'; w++)
 		{
-			printf("Error\n");
-			return (1);
+			if (s[w] < '0' || s[w] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			sum += atoi(s);
 		}
-		sum += atoi(a);
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
 	return (0);
 }
