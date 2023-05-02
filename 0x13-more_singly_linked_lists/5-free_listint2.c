@@ -11,6 +11,11 @@ void free_listint2(listint_t **head)
 	listint_t *first = *head;
 	listint_t *now;
 
+	if (*head == NULL)
+	{
+		return;
+	}
+
 	while (first != NULL)
 	{
 		now = first;
