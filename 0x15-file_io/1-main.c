@@ -4,7 +4,8 @@
 
 /**
  * main - check the code
- *
+ * @ac: integer
+ * @av: pointer to character
  * Return: Always 0.
  */
 int main(int ac, char **av)
