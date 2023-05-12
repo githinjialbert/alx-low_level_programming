@@ -1,11 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
-*read_textfile - reads a file and prints it to stdout
-*@filename: pointer to the const char
-*@letters: no of letters it should read and print
-*Return: alwyas 0
+*read_textfile - reads a textfile and prints it to POSIX
+*@filename: name of the file
+*@letters: the amount of words in the file
+*Return: always 0
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -20,13 +20,27 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	o = open(filename, O_RDONLY);
-	r = read(o, buffer, letters);
-	w = write(STDOUT_FILENO, buffer, r);
-
-	if (o == -1 || r == -1 || w == -1 || w != r)
+	if (o == -1)
 	{
 		free(buffer);
 		close(o);
+		return (0);
 	}
+	r = read(o, buffer, letters);
+	if (r == -1)
+	{
+		free(buffer);
+		close(o);
+		return (0);
+	}
+	w = write(STDOUT_FILENO, buffer, r);
+	if (w == -1 || w != r)
+	{
+		free(buffer);
+		close(o);
+		return (0);
+	}
+	free(buffer);
+	close(o);
 	return (w);
 }
