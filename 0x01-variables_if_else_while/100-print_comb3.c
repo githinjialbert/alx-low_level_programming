@@ -2,7 +2,7 @@
 /**
 *main - Entry point
 *Description: Inventing is a combination of brains and material
-*Retrun: always 0
+*Return: always 0
 */
 int main(void)
 {
