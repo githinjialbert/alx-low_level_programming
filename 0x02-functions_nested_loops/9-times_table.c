@@ -5,25 +5,38 @@
 */
 void times_table(void)
 {
-	int num;
-	int result;
 	int num1;
+	int num2;
+	int result;
 
-	for (num = 0; num <= 9; num++)
+	for (num1 = 0; num1 <= 9; num1++)
 	{
-		for (num1 = 0; num1 <= 9; num1++)
-			result = num * num1;
-		if (num == 0)
+		for (num2 = 0; num2 <= 9; num2++)
 		{
-			result++;
-			num++;
+			result = num1 * num2;
+
+			if (num2 == 0)
+			{
+				putchar('0' + result);
+			}
+			else if (result < 10)
+			{
+				putchar(' ');
+				putchar('0' + result);
+			}
+			else
+			{
+				putchar('0' + result / 10);
+				putchar('0' + result % 10);
+			}
+			if (num2 < 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			num2++;
 		}
-		else if (num1 == 0)
-		{
-			result++;
-			num1++;
-		}
-		printf("%2d, ", result);
+		putchar('\n');
 	}
-	printf("\n");
+	num1++;
 }
