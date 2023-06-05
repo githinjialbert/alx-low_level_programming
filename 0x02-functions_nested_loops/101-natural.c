@@ -15,7 +15,7 @@ int main(void)
 			sum += v;
 		}
 		printf("%d\n", sum);
-		v++;
+		sum++;
 	}
 	return (0);
 }
