@@ -12,9 +12,10 @@ int main(void)
 	{
 		if (v % 3 == 0 || v % 5 == 0)
 		{
-			printf("%d\n", sum);
+			sum += v;
 		}
-		v++;
+		printf("%d\n", sum);
+		c++;
 	}
 	return (0);
 }
