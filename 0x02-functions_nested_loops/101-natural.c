@@ -5,7 +5,7 @@
 */
 int main(void)
 {
-	int v;
+	int v = 0;
 	int sum = 0;
 
 	while (v < 1024)
@@ -15,7 +15,7 @@ int main(void)
 			sum += v;
 		}
 		printf("%d\n", sum);
-		sum++;
+		v++;
 	}
 	return (0);
 }
