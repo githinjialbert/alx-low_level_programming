@@ -12,8 +12,7 @@ char *createBuffer(char *name)
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO,
-				"Error: Cant write to %s\n", name);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", name);
 		exit(99);
 	}
 	return (buff);
@@ -31,7 +30,7 @@ void closeFile(int file)
 	
 	if (v == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Cant close fd %d\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 		exit(100);
 	}
 }
@@ -60,16 +59,14 @@ int main(int argc, char *argv[])
 	do{
 		if (from == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO, 
-					"Error: Cant write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[2]);
 			free(buff);
 			exit(98);
 		}
 		w = write(to, buff, r);
 		if (to == -1 || w == -1)
 		{
-			dprintf(STDERR_FILENO, 
-					"Error: Cant write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buff);
 			exit(99);
 		}
