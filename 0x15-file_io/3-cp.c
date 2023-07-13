@@ -74,10 +74,8 @@ int main(int argc, char *argv[])
 		to = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	while (r > 0);
-	{
-		free(buff);
-		closeFile(from);
-		closeFile(to);
-	}
+	free(buff);
+	closeFile(from);
+	closeFile(to);
 	return (0);
 }
