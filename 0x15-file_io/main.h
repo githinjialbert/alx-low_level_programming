@@ -25,15 +25,9 @@ int append_text_to_file(const char *filename, char *text_content);
 char *createBuffer(char *name);
 void closeFile(int file);
 int main(int argc, char *argv[]);
-
-
-
-
-
-
-
-
-
+void displayError(const char *info);
+void displayElfHeader(const Elf64_Ehdr *elfHeader);
+int main(int argc, char **argv);
 
 
 
