@@ -12,7 +12,7 @@ char *createBuffer(char *name)
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILNO,
+		dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", name);
 		exit(99);
 	}
